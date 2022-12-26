@@ -8,7 +8,7 @@ st.title("Feed")
 FRAME_WINDOW = st.image([])
 FRAME_WINDOW1 = st.image([])
 camera = cv2.VideoCapture(0)
-model2 = tf.keras.models.load_model('C:\\Users\\nithe\\PycharmProjects\\pstreamlit\\model.h5')
+model2 = tf.keras.models.load_model('C:\\Users\\nithe\\PycharmProjects\\pstreamlit\\final.h5')
 
 while True:
     _, frame1 = camera.read()
