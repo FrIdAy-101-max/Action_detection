@@ -1,14 +1,15 @@
 import cv2
-import streamlit as st
+import streamlit
 import time
 import tensorflow as tf
 import numpy as np
-st.title("Feed")
-
-FRAME_WINDOW = st.image([])
-FRAME_WINDOW1 = st.image([])
+streamlit.title("Action Detection")
+streamlit.subheader('Absdiff feed')
+FRAME_WINDOW = streamlit.image([])
+streamlit.subheader('Live CAM feed')
+FRAME_WINDOW1 = streamlit.image([])
 camera = cv2.VideoCapture(0)
-model2 = tf.keras.models.load_model('C:\\Users\\nithe\\PycharmProjects\\pstreamlit\\final.h5')
+model2 = tf.keras.models.load_model('C:\\Users\\nithe\\PycharmProjects\\pstreamlit\\model.h5')
 
 while True:
     _, frame1 = camera.read()
@@ -50,8 +51,9 @@ while True:
                             fontScale, color, thickness, cv2.LINE_AA)
 
 
-    FRAME_WINDOW.image(absdiff)
-    FRAME_WINDOW1.image(frame1)
+    FRAME_WINDOW.image(absdiff,width=500)
+
+    FRAME_WINDOW1.image(frame1,width=500)
 
 
 
@@ -59,4 +61,4 @@ while True:
 
 
 else:
-    st.write('Stopped')
+    streamlit.write('Stopped')
