@@ -14,3 +14,6 @@ The model gave the acurracy of 95%
 
 
 The model was deployed in streamlit using python 
+# Output
+![image](https://user-images.githubusercontent.com/77102491/211141623-ef683856-4c96-4569-8551-60603e8f0248.png)
+
